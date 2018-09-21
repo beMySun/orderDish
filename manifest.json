@@ -1,0 +1,15 @@
+{
+  "background": {
+    "scripts": ["scripts/index.js", "scripts/notify.js"]
+  },
+  "browser_action": {
+    "default_icon": "assets/remind.png",
+    "default_popup": "index.html",
+    "default_title": "喝水吃饭"
+  },
+  "description": "喝水吃饭",
+  "manifest_version": 2,
+  "name": "喝水吃饭",
+  "permissions": ["notifications"],
+  "version": "0.0.2"
+}
