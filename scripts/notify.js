@@ -1,20 +1,10 @@
-/*!
- * @wcjiang/notify v2.0.10
- * JS achieve the browser title flashing , scrolling, voice prompts , chrome notice.
- * 
- * Copyright (c) 2018 kenny wang
- * http://jaywcjlove.github.io/iNotify
- * 
- * Licensed under the MIT license.
- */
-
-(function(global, factory) {
+(function (global, factory) {
   typeof exports === "object" && typeof module !== "undefined"
     ? (module.exports = factory())
     : typeof define === "function" && define.amd
       ? define(factory)
       : (global.Notify = factory());
-})(this, function() {
+})(this, function () {
   "use strict";
 
   // 提醒是否添加chrome通知
@@ -215,17 +205,17 @@
         option.body = nt.body;
         if (json.dir) option.dir = json.dir;
         var n = new Notification(nt.title, option);
-        n.onclick = function() {
+        n.onclick = function () {
           onclick && typeof onclick === "function" && onclick(n);
           url && window.open(url);
         };
-        n.onshow = function() {
+        n.onshow = function () {
           json.onshow && typeof json.onshow === "function" && json.onshow(n);
         };
-        n.onclose = function() {
+        n.onclose = function () {
           json.onclose && typeof json.onclose === "function" && json.onclose(n);
         };
-        n.onerror = function() {
+        n.onerror = function () {
           json.onerror && typeof json.onerror === "function" && json.onerror(n);
         };
         this.Notifiy = n;

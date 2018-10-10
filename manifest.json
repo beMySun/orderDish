@@ -5,11 +5,11 @@
   "browser_action": {
     "default_icon": "assets/remind.png",
     "default_popup": "index.html",
-    "default_title": "喝水吃饭"
+    "default_title": "点餐"
   },
-  "description": "喝水吃饭",
+  "description": "点餐",
   "manifest_version": 2,
-  "name": "喝水吃饭",
+  "name": "点餐",
   "permissions": ["notifications"],
   "version": "0.0.2"
 }
